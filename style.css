@@ -1,0 +1,40 @@
+body {
+    font-family: "Poppins", sans-serif;
+    overflow: hidden;
+    background-color: #f3f5f8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+}
+/*esta clase correponde a la principal de todo el contenido*/
+.wrapper {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+    overflow: hidden;
+
+}
+/*esta clase corresponde al contenido de los textos y los botones*/
+.prinss {
+    width: 50%;
+}
+ /*esta clase estiliza la palabra "Hola"*/
+.text-h {
+    display: block;
+    position: relative;
+    font-size: 35px;
+    letter-spacing: 5px;
+    color: #3d535f;
+}
