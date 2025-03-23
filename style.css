@@ -8,7 +8,6 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 main {
@@ -24,7 +23,6 @@ main {
     align-items: center;
     padding: 0 10%;
     overflow: hidden;
-
 }
 /*esta clase corresponde al contenido de los textos y los botones*/
 .prinss {
@@ -47,7 +45,6 @@ main {
     width: 45px;
     bottom: 10px;
     background-color: rgb(247, 243, 20);
-
 }
 
 h1 {
@@ -88,5 +85,50 @@ button {
     letter-spacing: 2px;
     text-transform: capitalize;
     box-shadow: 0 15px 10px #363738;
+}
 
+/*aqui se utiliza una pseudoclase para que al seleccionar el boton cambie de color*/
+button:hover {
+    background-color: rgb(167, 46, 46);
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+/*esta clase abarca a las tres imagenes que estan del lado derecho*/
+.imgts {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.imgts img {
+    position: relative;
+    height: 100%;
+    top: 60px;
+    right: 50px;
+    transform: rotateY(180deg);
+    animation: animateUser 4s linear infinite;
+}
+@media (min-height: 690px){
+    .imgts .foto {
+        width: 530px;
+        position: relative;
+        top: 170px;
+        animation: animateUser 7s linear infinite;
+        
+    }
+    @keyframes animateUser {
+        50% {
+            right: 30px;
+            top: 160px;
+        }
+    
+    }
+}
+@keyframes animateUser {
+    50% {
+        right: 30px;
+        top: 90px;
+    }
 }
