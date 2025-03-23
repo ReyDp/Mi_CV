@@ -38,3 +38,55 @@ main {
     letter-spacing: 5px;
     color: #3d535f;
 }
+ /*al igual que esta, pero utilizando un pseudoelemento para crear 
+ el guion bajo que tiene al lado*/
+ .text-h::after  {
+    position: absolute;
+    content: '';
+    height: 4px;
+    width: 45px;
+    bottom: 10px;
+    background-color: rgb(247, 243, 20);
+
+}
+
+h1 {
+    display: block;
+    font-size: 3em;
+    font-weight: 900;
+    color: #3d535f;
+}
+/*esta clase estiliza la palabra "Bienvenido"*/
+.multitext {
+    color: rgb(247, 243, 20);
+    text-transform: capitalize;
+}
+
+p {
+    display: block;
+    width: 90%;
+    font-size: 13px;
+    color: #3d535f;
+}
+/*esta clase estiliza los dos botones*/
+.botons {
+    width: 100%;
+    position: relative;
+    left: 150px;
+}
+
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #3d535f;
+    padding: 8px 14px;
+    margin: 40px 5px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    box-shadow: 0 15px 10px #363738;
+
+}
