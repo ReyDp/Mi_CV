@@ -1,0 +1,374 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: rgba(190, 186, 186, 0.733);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+/*esta clase estiliza todo el contenido de la pagina, es la clase principal*/
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    max-height: 1000px;
+    background: aliceblue;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0,0,0,0.1);
+}
+/*esta clase es la que abarca la parte izquierda, todo el contenido que se encuentra
+en sección roja*/
+.sidele {
+    position: relative;
+    background: rgb(185, 8, 8);
+    padding: 40px;
+}
+/* esta clase estiliza la parte de la imagen y mi nombre*/
+.imtext {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #df3d3d;
+}
+
+.imtext figure {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.imtext figure img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    transform: rotateY(180deg);
+}
+
+.imtext h2 {
+    color: #fff;
+    font-size: 1.3em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+/*esta clase abarca toda la parte de informacion personal*/
+.info-for {
+    margin-top: 40px;
+}
+/*esta clase correponde a los titulos de informacion personal, eduacion y lenguajes*/
+.title {
+    font-size: 17px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.info-for ul li {
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+}
+
+a {
+    text-decoration: none;
+    color: #a17171;
+}
+
+.info-for span{
+font-size: 15px;
+
+}
+
+/*la clase icon estiliza todos los iconos*/
+.info-for ul li .icon {
+display: inline-block;
+width: 20px;
+font-size: 18px;
+color: #e67979;
+
+}
+/*esta clase abarca la parte de Educacion*/
+.info-edu {
+    margin-top: 40px;
+}
+
+.info-edu ul li{
+    position: relative;
+    list-style: none;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.info-edu h5 {
+    color: #e67979;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.info-edu span {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.info-edu li h6 {
+    color: #fff;
+    margin-bottom: 5px;
+    margin-top: 7px;
+    font-weight: 300;
+    font-size: 12px;
+}
+/*esta clase corresponde a la parte de lenguaje*/
+.info-len {
+    margin-top: 40px;
+}
+
+.info-len .text {
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: #e67979;
+    font-weight: bold;
+    letter-spacing: 1px;
+    
+}
+/*esta clase corresponde a las lineas de porcentaje*/
+.porcen {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: rgb(20, 20, 20);
+    display: block;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 5px 0;
+    
+}
+
+.porcen::before {
+    content: '';
+    position: absolute;
+    width: var(--por);
+    height: 100%;
+    background: #3b8fe9;  
+}
+/*esta parte corresponda a toda la parte de la sección blanca*/
+.sideri {
+    position: relative;
+    background: #fff;
+    padding: 40px;
+}
+/*esta clase corresponde a la del perfil*/
+.textseg {
+    margin-bottom: 50px;
+}
+
+.textseg p {
+    color: rgb(65, 60, 60);
+    font-size: 13.5px;
+    font-weight: 500;
+    text-align: justify;
+}
+
+ /*esta clase abarca la parte de habilidades, experiencia y la imagen*/
+ .info-im {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 77px;
+    border-bottom: 2px solid #df3d3d;
+}
+/*esta clase corresponde a los titulos de habilidades y experiencia*/
+.title-2 {
+    color: red;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    font-size: 19px;
+}
+
+/*esta clase corresponde la parte de habilidades y experiencia*/
+.info-hab-exp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+/* la clase hab corresponde solo la parte de habiliades*/
+.info-hab-exp .hab {
+    margin-right: 300px;
+}
+/*la clase de exp corresponde solo la parte de experiencia*/
+.info-hab-exp .exp .hab{
+    width: 200px;
+}
+
+.info-hab-exp ul li {
+    list-style: none;
+    color: rgb(65, 60, 60);
+}
+
+.info-hab-exp h6 {
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 9px;
+
+}
+
+/*esta clase corresponde al contenido de conocimiento*/
+.info-cono {
+    margin-top: 50px;
+}
+
+/*esta clase estiliza cada item que se encuentra en la seccion de conocimientos*/
+.lis-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 20px 0;
+}
+
+.lis-box h4 {
+    color: rgb(99, 91, 91);
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+/*la clas porcent corresponde a las lineas de porcentaje*/
+.lis-box .porcent {
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: rgb(219, 214, 214);
+    border-radius: 2px;
+
+}
+
+.porcent::before {
+    content: '';
+    position: absolute;
+    width: var(--porc);
+    height: 100%;
+    background: #3b8fe9;  
+    border-radius: 3px;
+}
+/*esta clase abarca la ultima seccion de ingreso*/
+.ulsec {
+    width: 600px;
+    height: 350px;
+    background-color: #aa1414;
+    margin-top: 50px;
+}
+/*esta clase correponde solo a la parte del registro*/
+.regis {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    margin-left: 30px;
+}
+
+.regis h5 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+}
+/*el id ava1 corresponde a la ultima imagen*/
+.ulsec #ava1 {
+    position: relative;
+    width: 400px;
+    bottom: 382px;
+    left: 240px;
+    transform: rotateY(180deg);
+    animation: animateUser 4s linear infinite;
+}
+
+.regis form{
+    margin-bottom: 10px;
+}
+/*esta clase corresponde a los inputs tipo text*/
+.inputs input {
+  width: 50%;
+  border: none;
+  font-size: 15px;
+  margin-bottom: 10px;
+  background: #f1abab;
+  border-radius: 15px;
+  outline: 1px dashed rgb(241, 237, 237);
+  padding-left: 5px;
+
+}
+
+.inputs input::placeholder {
+    color: #555252;
+    font-size: 12px;
+    text-indent: 7px;
+
+}
+/*la clase sex corresponde al input tipo radio*/
+.sex span {
+    font-size: 14px;
+    color: #eed3d3;
+    letter-spacing: 1px;
+}
+
+.sex label {
+    color: rgb(177, 164, 164);
+    font-size: 14px;
+}
+/*esta clase corresponde al input tipo date*/
+.fech {
+    margin-top: 10px;
+}
+
+.fech label {
+    color: #eed3d3;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.fech input {
+    border: none;
+    background: transparent;
+    color: #ee7777;
+    cursor: pointer;
+}
+
+/*esta clase corresponde al input tipo submit*/
+.boton {
+    margin-top: 15px;
+    background-color: #3b8fe9; 
+    color: white;
+    width: 90px;
+    height: 29px;
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3); 
+    transition: transform 0.3s, box-shadow 0.3s; 
+}
+
+.boton:hover {
+    transform: translateY(2px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+    background-color: red;
+}
