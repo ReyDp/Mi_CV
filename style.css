@@ -14,6 +14,7 @@ main {
     width: 100%;
     min-height: 100vh;
 }
+
 /*esta clase correponde a la principal de todo el contenido*/
 .wrapper {
     display: flex;
@@ -24,10 +25,12 @@ main {
     padding: 0 10%;
     overflow: hidden;
 }
+
 /*esta clase corresponde al contenido de los textos y los botones*/
 .prinss {
     width: 50%;
 }
+
  /*esta clase estiliza la palabra "Hola"*/
 .text-h {
     display: block;
@@ -36,6 +39,7 @@ main {
     letter-spacing: 5px;
     color: #3d535f;
 }
+
  /*al igual que esta, pero utilizando un pseudoelemento para crear 
  el guion bajo que tiene al lado*/
  .text-h::after  {
@@ -53,6 +57,7 @@ h1 {
     font-weight: 900;
     color: #3d535f;
 }
+
 /*esta clase estiliza la palabra "Bienvenido"*/
 .multitext {
     color: rgb(247, 243, 20);
@@ -65,6 +70,7 @@ p {
     font-size: 13px;
     color: #3d535f;
 }
+
 /*esta clase estiliza los dos botones*/
 .botons {
     width: 100%;
@@ -96,12 +102,14 @@ a {
     text-decoration: none;
     color: #fff;
 }
+
 /*esta clase abarca a las tres imagenes que estan del lado derecho*/
 .imgts {
     position: relative;
     width: 100%;
     height: 100%;
 }
+
 .imgts img {
     position: relative;
     height: 100%;
@@ -110,13 +118,13 @@ a {
     transform: rotateY(180deg);
     animation: animateUser 4s linear infinite;
 }
+
 @media (min-height: 690px){
     .imgts .foto {
         width: 530px;
         position: relative;
         top: 170px;
         animation: animateUser 7s linear infinite;
-        
     }
     @keyframes animateUser {
         50% {
@@ -126,9 +134,58 @@ a {
     
     }
 }
+
 @keyframes animateUser {
     50% {
         right: 30px;
         top: 90px;
+    }
+}
+
+/*el id "splash" corresponde al circulo grande que esta al lado derecho*/
+.imgts #splash {
+    position: absolute;
+    top: 20%;
+    left: 130%;
+    transform: translate(-50%, -50%) rotate(-35deg);
+    filter: saturate(200%);
+    animation: animate 4s linear infinite;
+}
+
+ /*este id "splan" corresponde al circulo mediano que esta al lado derecho*/
+ .imgts #splan {
+    position: absolute;
+    top: 20%;
+    width: 350px;
+    height: 200px;
+    transform: translate(-50%, -60%) rotate(-35deg);
+    filter: saturate(200%);
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+    50% {
+        right: 30px;
+        top: 90px;
+    }
+
+}
+
+/*esta clase y el id corresponden al circulo que esta al lado izquierdo*/
+.otcir #spans {
+    position: absolute;
+    left: -20px;
+    top: 60%;
+    position: absolute;
+    height: 500px;
+    width: 800px;
+    transform: translate(-40%, 5px) rotate(-60deg);
+    animation: object1 6s linear infinite;
+}
+
+@keyframes object1 {
+    50% {
+        left: -13%;
+        top: 51%;
     }
 }
