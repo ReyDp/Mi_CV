@@ -12,6 +12,39 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"/>
         <link rel="stylesheet" href="style-2.css">
     </head>
+    <script>
+        document.querySelector('form').addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        const nombre = document.getElementById('name').value;
+        const especialidad = document.getElementById('espec').value;
+        const fecha = document.getElementById('fecha').value;
+        const sexo = document.querySelector('input[name="sexo"]:checked')?.value;
+
+        if (!sexo) {
+            alert("Por favor selecciona un sexo.");
+            return;
+        }
+
+        const datos = { nombre, especialidad, sexo, fecha };
+
+        try {
+            const res = await fetch('/api/registros', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(datos)
+            });
+
+            const json = await res.json();
+            alert(json.mensaje);
+            document.querySelector('form').reset();
+        } catch (err) {
+            console.error(err);
+            alert("Error al enviar los datos.");
+        }
+        });
+    </script>
+
     <body>
         <!--este div abarca todo el contenido-->
         <div class="container">
@@ -167,10 +200,10 @@
                             </div>
                             <div class="sex">
                                 <span>Sexo</span><br>
-                                <input type="radio" id="sexo">
-                                <label for="sexo">Femenino</label><br>
-                                <input type="radio" id="sexo">
-                                <label for="sexo">Masculino</label>
+                                <input type="radio" id="femenino" name="sexo" value="Femenino" required>
+                                <label for="femenino">Femenino</label><br>
+                                <input type="radio" id="masculino" name="sexo" value="Masculino">
+                                <label for="masculino">Masculino</label>
                             </div>
                             <div class="fech">
                                 <label for="fecha">Fecha:</label>
@@ -181,7 +214,7 @@
                     </div>
                 </div>
             </div>
-        </div>   
+        </div>
     </body>
     <script src="cv.js"></script>
 </html>
